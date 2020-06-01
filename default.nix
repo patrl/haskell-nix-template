@@ -8,7 +8,7 @@ let
   pkgs = import nixpkgsSrc nixpkgsArgs;
 
   hspkgs = pkgs.haskell-nix.cabalProject {
-    src = pkgs.haskell-nix.haskellLib.cleanGit { name = "hackcell"; src = ./.; };
+    src = pkgs.haskell-nix.haskellLib.cleanGit { name = "myProject"; src = ./.; };
     compiler-nix-name = haskellCompiler;
   };
 
@@ -26,4 +26,5 @@ in
 {
   inherit shell;
   inherit hspkgs;
+  myProject = hspkgs.myProject;
 }

@@ -1,8 +1,9 @@
 spec-version: 0.30.0
-name: hackcell
+name: my-project
 author: Patrick D. Elliott
 maintainer: patrick.d.elliott@gmail.com
-license: None
+version: 0.1.0.0
+license: BSD3
 
 build-type: Simple
 
@@ -10,7 +11,7 @@ source-dirs: src
 dependencies:
 - { name: "base", version: '^>=4.13' }
 
-ghc-options: -Wall
+ghc-options: [-Wall,-threaded]
 # default-extensions:
 library: {}
 executable:
